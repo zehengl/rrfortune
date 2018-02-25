@@ -54,6 +54,11 @@ def test_():
         )
 
         driver.execute_script('arguments[0].click()', btn_fortune)
+
+        popup = WebDriverWait(driver, wait_time).until(
+            EC.visibility_of_element_located((By.ID, 'forPopupBox'))
+        )
+        assert popup.value_of_css_property('display') == 'block'
     except WebDriverException:
         assert False
     else:
