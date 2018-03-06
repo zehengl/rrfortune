@@ -16,7 +16,7 @@ def test_():
     password = os.environ.get('password')
     assert email and password
 
-    wait_time = os.environ.get('wait', default_wait)
+    wait_time = int(os.environ.get('wait', default_wait))
 
     try:
         options = webdriver.ChromeOptions()
