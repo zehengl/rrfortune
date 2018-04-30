@@ -14,7 +14,7 @@ So I have to improvise.
 
 ## Install
 1. Download the driver (I'm using Chrome)
-    - [mac](https://chromedriver.storage.googleapis.com/2.35/chromedriver_mac64.zipi)
+    - [mac](https://chromedriver.storage.googleapis.com/2.35/chromedriver_mac64.zip)
     - [linux](https://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip)
 
 2. Put the driver in the **PATH**
