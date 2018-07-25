@@ -11,6 +11,7 @@ setup(
     ],
     tests_require=[
         'pytest',
+        'rollbar'
     ],
     test_suite='tests',
     author='Zeheng Li',

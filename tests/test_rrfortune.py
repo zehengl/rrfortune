@@ -1,6 +1,7 @@
 
 import os
 
+import rollbar
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.by import By
@@ -12,6 +13,8 @@ default_wait = 10
 
 
 def test_():
+    rollbar.init(os.environ.get('rollbar'))
+
     email = os.environ.get('email')
     password = os.environ.get('password')
     assert email and password
@@ -58,10 +61,16 @@ def test_():
         popup = WebDriverWait(driver, wait_time).until(
             EC.visibility_of_element_located((By.ID, 'forPopupBox'))
         )
-        assert popup.value_of_css_property('display') == 'block'
+
+        passed = popup.value_of_css_property('display') == 'block'
+        if not passed:
+            rollbar.report_message('Test Failed')
+        assert passed
     except WebDriverException:
+        rollbar.report_message('Test Errored')
         assert False
     else:
+        rollbar.report_message('Test Passed')
         assert True
     finally:
         driver.quit()
