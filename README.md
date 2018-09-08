@@ -1,4 +1,6 @@
-# rrfortune [![Build Status](https://travis-ci.org/zehengl/rrfortune.svg?branch=master)](https://travis-ci.org/zehengl/rrfortune)
+# rrfortune
+
+[![Build Status](https://travis-ci.org/zehengl/rrfortune.svg?branch=master)](https://travis-ci.org/zehengl/rrfortune)
 
 ## Why
 
