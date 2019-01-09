@@ -45,13 +45,6 @@ def test_():
         input_password.send_keys(password)
         driver.execute_script('arguments[0].click()', btn_login)
 
-        app_live = WebDriverWait(driver, wait_time).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, 'li.app-live'))
-        )
-        profile_link = app_live.find_elements_by_class_name('app-link')[0].get_attribute('href')
-
-        driver.get(profile_link)
-
         btn_fortune = WebDriverWait(driver, wait_time).until(
             EC.presence_of_element_located((By.ID, 'assembleBtn'))
         )
