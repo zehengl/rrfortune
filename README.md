@@ -55,11 +55,9 @@ Setup chromedriver
 
 Export credentials
 
-    export username="..."
+    export email="..."
     export password="..."
-    export access_key="..."
-    export secret_key="..."
-    export rollbar_key="..."
+    export rollbar="..."
 
 Run test
 
