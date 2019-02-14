@@ -12,11 +12,9 @@ python:
   - "3.6"
 
 install:
-  - "pip install pipenv"
-  - "pipenv install --dev"
   - "curl -O https://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip"
   - "unzip -o chromedriver_linux64.zip"
   - "sudo mv -f chromedriver /usr/local/bin/chromedriver"
 
 script:
-  - "pipenv run py.test"
+  - "python setup.py test"

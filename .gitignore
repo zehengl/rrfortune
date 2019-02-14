@@ -1,10 +1,5 @@
-*.egg-info
-*.pyc
-.cache
-.coverage
+__pycache__
 .eggs
-build
-dist
-htmlcov
-geckodriver.log
-result.xml
+.pytest_cache
+*.egg-info
+venv

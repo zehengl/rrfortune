@@ -1,6 +1,7 @@
 # rrfortune
 
 [![Build Status](https://travis-ci.org/zehengl/rrfortune.svg?branch=master)](https://travis-ci.org/zehengl/rrfortune)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 ## Why
 
@@ -14,36 +15,57 @@ So I have to improvise.
 - Consider logging in and clicking the button a UI test
 - Have Travis CI run a daily build to trigger that test
 
-## Install
-1. Download the driver (I'm using Chrome)
-    - [mac](https://chromedriver.storage.googleapis.com/2.35/chromedriver_mac64.zip)
-    - [linux](https://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip)
+## Prerequisites
 
-2. Put the driver in the **PATH**
+Assuming you have access the following services
 
-3. Clone this repo
-    - ```git clone git@github.com:zehengl/rrfortune.git```
+- A RenRen account
+- A GitHub account
+- A Rollbar account (lazy error tracking)
+- A Travis CI account (daily cron job)
 
-4. Install dependencies (I'm using pipenv)
-    - ```pipenv install --dev```
+## Setup
 
-5. Export your login credentials
-    - ```export email='xxx@yyy.zzz'```
-    - ```export password='a1b2c3d4'```
+### Rollbar
 
-6. Run test
-    - ```pipenv run py.test```
+1. Create a new project
+2. Markdown the access token (rollbar key)
 
-My environment is as follow. Feel free to modify driver/test to fit your needs.
-- Chrome: 64.0.3282.167
-- Chrome Driver: 2.35
-- macOS: 10.13.3
+### GitHub
 
-## Travis CI Setup
 1. Fork this repo
 
-2. Enable build on Travis CI
+### Travis CI
 
-3. Set the environment variables (*email*/*password*) on Travis CI
+1. Enable build on Travis CI
+2. Set the environment variables on Travis CI
+   - Rollbar: rollbar_key
+   - RenRen: email / password
+3. Set a daily cron job
 
-4. Set a daily cron job
+All set!
+
+## Develop
+
+Setup chromedriver
+
+    curl -O https://chromedriver.storage.googleapis.com/2.46/chromedriver_mac64.zip
+    unzip -o chromedriver_mac64.zip
+    mv -f chromedriver /usr/local/bin/chromedriver
+
+Export credentials
+
+    export username="..."
+    export password="..."
+    export access_key="..."
+    export secret_key="..."
+    export rollbar_key="..."
+
+Run test
+
+    cd rrfortune
+    python -m venv venv
+    source venv/bin/activate
+    pip install -U pip
+    pip install -r requirements-dev.txt
+    pytest
