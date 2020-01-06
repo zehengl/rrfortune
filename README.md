@@ -4,6 +4,8 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![time tracker](https://wakatime.com/badge/github/zehengl/rrfortune.svg)](https://wakatime.com/badge/github/zehengl/rrfortune)
 
+A RenRen fortune collector
+
 ## Why
 
 Believe it or not, my wife is still obsessed with the login streak on [RenRen](http://renren.com/).
