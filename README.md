@@ -1,3 +1,7 @@
+<div align="center">
+    <img src="https://cdn3.iconfinder.com/data/icons/digital-marketing-27/64/Computer-notebook-laptop-website-click-banner-web-512.png" alt="logo" height="196">
+</div>
+
 # rrfortune
 
 [![Build Status](https://travis-ci.org/zehengl/rrfortune.svg?branch=master)](https://travis-ci.org/zehengl/rrfortune)
@@ -70,3 +74,16 @@ Run test
     pip install -U pip
     pip install -r requirements-dev.txt
     pytest
+
+<hr>
+
+<sup>
+
+## Credits
+
+- [Icon][1] by [Eucalyp Studio][2]
+
+</sup>
+
+[1]: https://www.iconfinder.com/icons/2992651/banner_click_computer_laptop_notebook_web_website_icon
+[2]: https://www.iconfinder.com/ratch0013
