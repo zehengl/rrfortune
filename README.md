@@ -6,7 +6,6 @@
 
 [![Build Status](https://travis-ci.org/zehengl/rrfortune.svg?branch=master)](https://travis-ci.org/zehengl/rrfortune)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
-[![time tracker](https://wakatime.com/badge/github/zehengl/rrfortune.svg)](https://wakatime.com/badge/github/zehengl/rrfortune)
 
 A RenRen fortune collector
 
