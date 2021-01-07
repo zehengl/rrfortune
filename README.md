@@ -40,8 +40,9 @@ Assuming you have access the following services
 
 1. Fork this repo
 2. Set the environment variables on `Settings > Secrets > Repository secrets`
-   - Rollbar: rollbar_key
-   - RenRen: email / password
+   - rollbar: Rollbar project access token (with `post_server_item` scope)
+   - email: RenRen email
+   - password: RenRen password
 
 All set!
 

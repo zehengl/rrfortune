@@ -7,12 +7,14 @@ from seleniumbase import BaseCase
 
 class RenRenTestClass(BaseCase):
     def test_fortune_collection(self):
-        rollbar.init(os.environ.get("rollbar"))
+        email = os.environ.get("email")
+        password = os.environ.get("password")
+        token = os.environ.get("rollbar")
+
+        self.assert_true(email and password and token)
 
         try:
-            email = os.environ.get("email")
-            password = os.environ.get("password")
-
+            rollbar.init(token)
             self.open("http://renren.com")
 
             self.wait_for_element("email", by=By.ID)
@@ -27,6 +29,7 @@ class RenRenTestClass(BaseCase):
             # self.wait_for_element("forPopupBox", by=By.ID)
             self.assert_element_visible("forPopupBox", by=By.ID)
         except:
-            rollbar.report_message("Test Errored")
+            rollbar.report_message("Test Erred")
+            self.assert_true(False)
         else:
             rollbar.report_message("Test Passed")
