@@ -34,13 +34,13 @@ Assuming you have access the following services
 ### Rollbar
 
 1. Create a new project
-2. Markdown the access token (rollbar key)
+2. Markdown the project access token with `post_server_item` scope
 
 ### GitHub
 
 1. Fork this repo
 2. Set the environment variables on `Settings > Secrets > Repository secrets`
-   - rollbar: Rollbar project access token (with `post_server_item` scope)
+   - rollbar: Rollbar project access token
    - email: RenRen email
    - password: RenRen password
 
