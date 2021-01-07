@@ -62,7 +62,7 @@ Run test
     pip install -U pip
     pip install -r requirements-dev.txt
     seleniumbase install chromedriver
-    pytest
+    pytest --headless
 
 <hr>
 

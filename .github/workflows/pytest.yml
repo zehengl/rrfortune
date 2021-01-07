@@ -2,9 +2,9 @@ name: pytest
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
   schedule:
     - cron: "0 6 * * *"
 
@@ -12,21 +12,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Setup Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: "3.7"
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        python -m pip install -r requirements-test.txt
-        seleniumbase install chromedriver
-    - name: Test with pytest
-      run: |
-        pytest
-      env:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.7"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-test.txt
+          seleniumbase install chromedriver
+      - name: Test with pytest
+        run: |
+          pytest --headless
+        env:
           email: ${{ secrets.EMAIL }}
           password: ${{ secrets.PASSWORD }}
-          rollbar: ${{ secrets.ROLLBAR }} 
+          rollbar: ${{ secrets.ROLLBAR }}
