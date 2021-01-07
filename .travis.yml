@@ -12,9 +12,8 @@ python:
   - "3.7"
 
 install:
-  - "curl -O https://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip"
-  - "unzip -o chromedriver_linux64.zip"
-  - "sudo mv -f chromedriver /usr/local/bin/chromedriver"
+  - "pip install -r requirements-test.txt"
+  - "seleniumbase install chromedriver"
 
 script:
-  - "python setup.py test"
+  - "pytest"
