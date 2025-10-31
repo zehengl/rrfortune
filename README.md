@@ -1,7 +1,3 @@
-<div align="center">
-    <img src="https://cdn3.iconfinder.com/data/icons/digital-marketing-27/64/Computer-notebook-laptop-website-click-banner-web-512.png" alt="logo" height="196">
-</div>
-
 # rrfortune
 
 ![pytest](https://github.com/zehengl/rrfortune/workflows/pytest/badge.svg)
@@ -63,16 +59,3 @@ Run test
     pip install -r requirements-dev.txt
     seleniumbase install chromedriver
     pytest --headless
-
-<hr>
-
-<sup>
-
-## Credits
-
-- [Icon][1] by [Eucalyp Studio][2]
-
-</sup>
-
-[1]: https://www.iconfinder.com/icons/2992651/banner_click_computer_laptop_notebook_web_website_icon
-[2]: https://www.iconfinder.com/ratch0013
